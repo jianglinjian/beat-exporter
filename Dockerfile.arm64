@@ -1,0 +1,6 @@
+FROM cargo.caicloud.xyz/arm64v8/debian:stretch-curl
+
+COPY .build/linux-arm64/beat-exporter /bin/beat-exporter
+
+EXPOSE      9479
+ENTRYPOINT  [ "/bin/beat-exporter" ]
